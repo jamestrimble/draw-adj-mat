@@ -53,5 +53,6 @@ def read_instance(lines):
 if __name__ == "__main__":
     with open(sys.argv[1], "r") as f:
         g = read_instance([line for line in f.readlines()])
-    g.sort_by_degree()
+    if len(sys.argv) < 3:
+        g.sort_by_degree()
     g.show()
